@@ -27,4 +27,9 @@ public class Cuisine {
     public void setUniqueName(String uniqueName) {
         this.uniqueName = uniqueName;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
