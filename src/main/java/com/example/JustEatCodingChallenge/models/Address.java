@@ -49,4 +49,9 @@ public class Address {
     public void setCoordinates(List<Double> coordinates) {
         this.coordinates = coordinates;
     }
+
+    @Override
+    public String toString(){
+        return firstLine + ", " + postalCode + " " + city;
+    }
 }
