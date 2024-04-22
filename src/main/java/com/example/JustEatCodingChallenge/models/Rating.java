@@ -4,6 +4,7 @@ public class Rating {
     private int count;
     private Double starRating;
     private Double userRating;
+    private double ratingAsNumber;
 
     public Rating() {
     }
@@ -11,7 +12,6 @@ public class Rating {
     public Rating(int count, Double starRating, Double userRating) {
         this.count = count;
         this.starRating = starRating;
-        this.userRating = userRating;
     }
 
     public int getCount() {
@@ -30,11 +30,4 @@ public class Rating {
         this.starRating = starRating;
     }
 
-    public Double getUserRating() {
-        return userRating;
-    }
-
-    public void setUserRating(Double userRating) {
-        this.userRating = userRating;
-    }
 }
