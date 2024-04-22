@@ -36,7 +36,7 @@ public class JustEatCodingChallengeApplication {
 				System.out.println("Top 10 restaurants in " + postcode + ":");
 				for (int i = 0; i < Math.min(10, restaurants.size()); i++) {
 					Restaurant restaurant = restaurants.get(i);
-					System.out.println((i + 1) + ". " + restaurant.getName());
+					System.out.println((i + 1) + ". " + restaurant.getName() + ", " + restaurant.getAddress().toString() + ". Rating: " + restaurant.getRating().getStarRating() + ". Cuisines: " + restaurant.getCuisines().toString());
 				}
 			}
 			scanner.close();
