@@ -2,7 +2,6 @@ package com.example.JustEatCodingChallenge.UI;
 
 import com.example.JustEatCodingChallenge.models.Restaurant;
 import com.example.JustEatCodingChallenge.service.APIService;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -28,9 +27,9 @@ public class UserInterface {
                 } else {
                     List<Restaurant> restaurants = apiService.fetchData(input);
                     if (restaurants.isEmpty()) {
-                        System.out.println("No restaurants found for the given postcode.");
+                        System.out.println("No restaurants found for the given postcode. Double check that postcode is valid.");
                     } else {
-                        System.out.println("Top 10 restaurants in " + input + ":");
+                        System.out.println("First 10 restaurants in " + input + ":");
                         for (int i = 0; i < Math.min(10, restaurants.size()); i++) {
                             Restaurant restaurant = restaurants.get(i);
                             System.out.println((i + 1) + ". " + restaurant.getName() + ", " + restaurant.getAddress().toString() + ". Rating: " + restaurant.getRating().getStarRating() + ". Cuisines: " + restaurant.getCuisines().toString());
